@@ -1,0 +1,218 @@
+.search-results {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: calc(100vh - 80px);
+}
+
+.search-header {
+  margin-bottom: 2rem;
+}
+
+.search-header h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.search-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 4rem;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.no-results {
+  text-align: center;
+  padding: 4rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.no-results h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.routes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.route-card {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.route-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.route-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.bus-info h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 0.3rem;
+}
+
+.bus-type {
+  color: #667eea;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.operator {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.route-timing {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.time-point {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.time {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.city {
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+}
+
+.duration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.duration-line {
+  width: 100px;
+  height: 2px;
+  background: #e0e0e0;
+}
+
+.duration-text {
+  position: absolute;
+  top: -20px;
+  background: white;
+  padding: 0 0.5rem;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.route-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.amenities {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.amenity-tag {
+  background: #f0f0f0;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.seats-available {
+  color: #28a745;
+  font-weight: 600;
+}
+
+.route-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-label {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #667eea;
+}
+
+.book-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 0.8rem 2.5rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.book-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.book-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .route-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .route-timing {
+    width: 100%;
+  }
+  
+  .duration-line {
+    width: 60px;
+  }
+}
